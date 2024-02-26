@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Qual seu nivel de satisfação:" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <template for:each={stars} for:item="star">
+                <lightning-icon key={star.Index} icon-name="utility:favorite" variant={star.State}
+                    onmouseover={handleRatingHover} onmouseout={handleRatingHoverOut} onclick={handleRatingClick}
+                    data-id={star.Index} size={size} src={star.CustomUrl}>
+                </lightning-icon>
+            </template>
+        </div>
+    </lightning-card>
+</template>
